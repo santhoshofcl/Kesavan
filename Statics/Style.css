@@ -1,0 +1,240 @@
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+  }
+  header{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+  }
+  .logo{
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .box{
+    height:auto;
+    width :auto;
+    background-color:transparent;
+    color:white;
+    text-align:justify;
+    border:5px black;
+  }
+  .navigation{
+    position: relative;
+  }
+  .navigation-items{
+    display: flex;
+    margin-left: 600px;
+  }
+  .navigation-items a{
+    position: relative;
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+  }
+  .family{
+    margin: 100%;
+    background-size:cover;
+    height: 100mvh;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  section{
+    padding: 100px 200px;
+  }
+  .home_main{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0,0.50),rgba(0, 0, 0,0.50)),url(image/home_bg.gif);
+    background-size: cover;
+    background-position: center;
+    transition: .3s ease;
+  }
+  .home_main.active{
+    filter: blur(15px);
+    pointer-events: none;
+  }
+  .about_main{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0,0.50),rgba(0, 0, 0,0.50)),url(image/about_bg.gif);
+    background-size: cover;
+    background-position: center;
+    transition: .3s ease;
+  }
+  .about_main.active{
+    filter: blur(15px);
+    pointer-events: none;
+  }
+  .home_content{
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10rem;
+}
+.btn{
+  display: inline-block;
+  padding: 0.5rem 1.4rem;
+  background: brown;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  color: black;
+  border: 2px solid transparent;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.btn:hover{
+  box-shadow: 0 0 25px;
+  background-color: rgba(255, 77, 0, 0.846);
+  color:white;
+}
+  .main{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0,0.50),rgba(0, 0, 0,0.50)),url(image/author_bg.gif);
+    background-size: cover;
+    background-position: center;
+    transition: .3s ease;
+}
+.main.active{
+    filter: blur(15px);
+    pointer-events: none;
+}
+
+  .author{
+    position: relative;
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .author img{
+    top: 0;
+    left: 100px;
+  }
+  .container{
+    display: flex;
+    gap: 20px;
+    perspective: 1000px;
+  }
+  .front{
+    background: rgb(11, 11, 11);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+  }
+
+
+  #author_text {
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+    white-space: pre-wrap;
+    border-right: 3px solid transparent;
+    overflow: hidden;
+    display: inline-block;
+    animation: 0.8s step-end infinite;
+}
+
+@keyframes blink {
+    50% { border-color: white; }
+    from, to { border-color: transparent; }
+}
+
+#home_text {
+  color: white;
+  font-family: monospace;
+  font-size: 1.6rem;
+  font-weight: 600;
+  white-space: pre-wrap;
+  border-right: 3px solid transparent;
+  overflow: hidden;
+  display: inline-block;
+  animation: 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  50% { border-color: white; }
+  from, to { border-color: transparent; }
+}
+
+
+.author-img{
+  border-radius: 25%;
+}
+.author-img img{
+  position: relative;
+  border-radius: 50%;
+  box-shadow: 0 0 25px;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.author-img img:hover{
+  box-shadow: 0 0 50px,
+              0 0 100px;
+  color:cornsilk;
+}
+
+
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  color: white;
+}
+.about h2 span{
+  color: white;
+  text-shadow: 0 0 50px white;
+}
+.about-img{
+  border-radius: 50%;
+}
+.about-img img{
+  position: relative;
+  width: 28vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px white;
+  top: 1rem;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.about-img img:hover{
+  box-shadow: 0 0 50px whitesmoke,
+              0 0 100px white;
+}
+.heading{
+  text-align: center;
+  font-size: 5rem;
+}
+.about-content h2{
+  text-align: left;
+  line-height: 1;
+}
+.about-content h3{
+  font-size: 2rem;
+}
+.about-content p{
+  font-size: 1rem;
+  margin: 2rem 0 3rem;
+}
