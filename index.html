@@ -1,0 +1,51 @@
+<!doctype html>
+<html> 
+ <head> 
+  <title>
+    Dragon Ball  
+  </title> 
+  <link rel="stylesheet" href="Statics/Style.css">
+ </head> 
+ <body>
+  <header>
+    <a href="#" class="logo">Dragon Ball</a>
+    <div class="navigation">
+      <div class="navigation-items">
+        <a href="index.html">Home</a>
+        <a href="author.html">Author</a>
+        <a href="charecters.html">Charecters</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </header>
+  <main class="home_main">
+  <section class="home">
+    <div class="home_content" id="home_text">
+    </div>
+  </section>
+</main>
+  
+  </body>
+  <script>
+    const text = `Dragon Ball (Japanese: ドラゴンボール, Hepburn: Doragon Bōru) is a Japanese media franchise created by Akira Toriyama in 1984. The initial manga, written and illustrated by Toriyama, was serialized in Weekly Shōnen Jump from 1984 to 1995, with the 519 individual chapters collected in 42 tankōbon volumes by its publisher Shueisha...
+    `;
+    
+    const moreLink = `<a href="charecters.html" class="btn">Click More</a>`;
+    
+    let index = 0;
+    
+    function typeText() {
+        if (index < text.length) {
+            document.getElementById("home_text").innerHTML = text.substring(0, index + 1);
+            index++;
+            setTimeout(typeText, 30); // Adjust speed (lower = faster)
+        } else {
+            // Append the link after typing is complete
+            document.getElementById("home_text").innerHTML += moreLink;
+        }
+    }
+    
+    window.onload = typeText;
+    </script>
+
+</html>

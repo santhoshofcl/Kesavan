@@ -1,0 +1,46 @@
+<!doctype html>
+<html> 
+ <head> 
+  <title>Dragon Ball</title> 
+    <link rel="stylesheet" href="Statics/Style.css"></link>
+ </head> 
+ <body>
+    <header>
+        <a href="#" class="logo">Dragon Ball</a>
+        <div class="navigation">
+          <div class="navigation-items">
+            <a href="index.html">Home</a>
+            <a href="author.html">Author</a>
+            <a href="charecters.html">Charecters</a>
+            <a href="about.html">About</a>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+      <section class="author" >
+        <div class="author-img">
+          <img src="Statics/image/Akira.png">
+        </div>
+         
+        <div class="box" style="text-indent:0.5px;">
+          <p id="author_text"></p>
+        </div> 
+      </section> 
+    </main>
+  
+  </body>
+  <script>
+    const text = `The author of Dragon Ball is Akira Toriyama, a highly influential Japanese manga artist and character designer. Born on April 5, 1955, in Nagoya, Japan, Toriyama is celebrated as one of the most prominent figures in manga and anime history.Toriyama first gained recognition in 1978 with his manga Dr. Slump, which was serialized in Weekly Shōnen Jump. The series won the Shogakukan Manga Award in 1981 and became a massive hit, setting the stage for his future success. In 1984, Toriyama launched Dragon Ball in Weekly Shōnen Jump. It was inspired by the classic Chinese novel Journey to the West but evolved into a unique blend of martial arts, adventure, and comedy. The series ran until 1995 and became one of the best-selling manga of all time, with over 300 million copies sold worldwide.Toriyama's Dragon Ball introduced iconic characters like Goku, Vegeta, and Frieza, and influenced countless manga and anime...`;
+
+let index = 0;
+function typeText() {
+    if (index < text.length) {
+        document.getElementById("author_text").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeText, 30); // Adjust speed (lower = faster)
+    }
+}
+window.onload = typeText;
+
+  </script>
+ </html>
